@@ -1,0 +1,8 @@
+.goodsBoxWithDrawer{
+    display: flex;
+
+}
+
+.box{
+    background-color: cornflowerblue;
+}

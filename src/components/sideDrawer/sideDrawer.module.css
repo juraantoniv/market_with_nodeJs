@@ -1,0 +1,7 @@
+.drawer {
+    display: flex;
+    background: blue;
+    width: 15rem;
+    justify-content: center;
+    height:35em;
+}
