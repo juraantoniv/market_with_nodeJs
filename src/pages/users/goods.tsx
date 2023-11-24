@@ -50,25 +50,29 @@ const Goods = () => {
     }
 
     return (
-        <div className={s.box}>
-            <SelectItemsCount/>
-            <div className={s.goodsBoxWithDrawer}>
-                <SideDrawer/>
+        <div>
+                <SelectItemsCount/>
+            <div className={s.box}>
+                <div className={s.goodsBoxWithDrawer}>
+                    <SideDrawer/>
 
-                <Grid container spacing={4} style={{gap:'10px', marginTop:'30px', marginLeft:'50px'}}>
-                    <ToastContainer />
-                    {
-                        users?.data?.map((user)=>(<UserPage data={user}/>))
-                    }
-                </Grid>
+                    <Grid container spacing={4} style={{gap:'10px', marginTop:'30px', marginLeft:'50px'}}>
+                        <ToastContainer />
+                        {
+                            users?.data?.map((user)=>(<UserPage data={user}/>))
+                        }
+                    </Grid>
 
-            </div>
+                </div>
 
                 <Pagination  sx={{marginTop:'30px'}} count={amountPages} page={users?.page} onChange={handleChange} variant="outlined" shape="rounded"  />
 
-            <ReactSlickDemo/>
-            <FooterPage/>
+                <ReactSlickDemo/>
+                <FooterPage/>
+            </div>
+
         </div>
+
 
 
 

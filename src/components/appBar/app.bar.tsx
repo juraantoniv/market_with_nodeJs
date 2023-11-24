@@ -25,6 +25,7 @@ import {ToastContainer} from "react-toastify";
 import {useSelector} from "react-redux";
 import {selectUsers, useAppDispatch} from "../../store/store";
 import {userThunks} from "../../store/slices";
+import s from "./app.bar.module.css"
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -92,15 +93,8 @@ export default function PrimarySearchAppBar() {
         <Box sx={{ flexGrow: 1 }}>
             <ToastContainer />
             {show && <div style={{ position:'absolute', top:"100px", right:'400px'}}><TabsDemo/></div>}
-    <AppBar position="static">
+    <AppBar position="static" className={s.header} >
     <Toolbar>
-    <Typography
-    variant="h6"
-    noWrap
-    component="div"
-    sx={{ display: { xs: 'none', sm: 'block' } }}
->
-    </Typography>
     <Search >
     <SearchIconWrapper>
         <SearchIcon />

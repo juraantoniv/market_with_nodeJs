@@ -17,6 +17,7 @@ import {selectBuy, selectUsers} from "../../store/store";
 import DropdownMenuDemo from "../../dropdownMenu/Dropdown Menu";
 import {AvatarProfile} from "../avatar/avatar";
 import {useNavigate} from "react-router-dom";
+import s from "./shoppingIcons.module.css"
 
 export const ShoppingIcons = () => {
 
@@ -141,8 +142,8 @@ export const ShoppingIcons = () => {
 
 
     return (
-        <>
-            <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+        <div className={s.headerIcons}>
+            <Box sx={{ display: { xs: 'none', md: 'flex' }} }>
               <DropdownMenuDemo/>
                 <IconButton
                     size="large"
@@ -170,6 +171,6 @@ export const ShoppingIcons = () => {
             </Box>
             {renderMobileMenu}
             {renderMenu}
-        </>
+        </div>
     );
 };
